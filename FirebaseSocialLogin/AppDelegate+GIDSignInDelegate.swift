@@ -28,7 +28,7 @@ extension AppDelegate {
                 return
             }
             
-            print("Successfully sign in Firebase: ", user?.uid ?? "")
+            print("Successfully sign in Firebase", "\nID: ", user?.uid ?? "noID", "\nName: ", user?.displayName ?? "noName", "\nEmail: ", user?.email ?? "noEmail")
         })
     }
 }

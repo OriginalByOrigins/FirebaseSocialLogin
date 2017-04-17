@@ -9,6 +9,8 @@
 import UIKit
 import FBSDKLoginKit
 import GoogleSignIn
+import Fabric
+import TwitterKit
 
 class ViewController: UIViewController {
     
@@ -21,7 +23,7 @@ class ViewController: UIViewController {
     let customFacebookButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .blue
+        button.backgroundColor = UIColor(red: 56.1/255, green: 89.1/255, blue: 178.2/255, alpha: 1)
         button.setTitle("Custom Facebook Login Button", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
@@ -52,6 +54,22 @@ class ViewController: UIViewController {
         return button
     }()
     
+    var twitterButton = TWTRLogInButton()
+    
+    let customTwitterButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = UIColor(red: 31/255, green: 151/255, blue: 255/255, alpha: 1)
+        button.setTitle("Custom Twitter Login Button", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.layer.cornerRadius = 5
+        button.layer.shadowOpacity = 0.6
+        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        button.layer.shadowRadius = 5
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -62,6 +80,9 @@ class ViewController: UIViewController {
         
         addDefaultGoogleButton()
         addCustomGoogleButton()
+        
+        addTwitterButton()
+        addCustomTwitterButton()
     }
 }
 

@@ -94,7 +94,7 @@ extension ViewController {
                 print("Failed to sign in to Firebase\n", error ?? "")
                 return
             }
-            print("Successfully sign in to Firebse\n", user ?? "")
+            print("Successfully sign in to Firebse", "\nID: ", user?.uid ?? "noID", "\nName: ", user?.displayName ?? "noName", "\nEmail: ", user?.email ?? "noEmail")
         })
     }
 }
