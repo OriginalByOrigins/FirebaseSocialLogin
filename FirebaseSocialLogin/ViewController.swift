@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import GoogleSignIn
 
 class ViewController: UIViewController {
     
@@ -27,13 +28,24 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    let defaultGoogleButton: GIDSignInButton = {
+        let button = GIDSignInButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = .white
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
         addDefaultFacebookButton()
         addCustomFacebookButton()
+        
+        addDefaultGoogleButton()
     }
 }
 

@@ -14,6 +14,8 @@
 		30D517621EA49D9300F005D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D517601EA49D9300F005D6 /* LaunchScreen.storyboard */; };
 		30D5176D1EA4DF7D00F005D6 /* ViewController+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5176C1EA4DF7D00F005D6 /* ViewController+Facebook.swift */; };
 		30D5176F1EA4E03C00F005D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D5176E1EA4E03C00F005D6 /* GoogleService-Info.plist */; };
+		30D517711EA4E9D200F005D6 /* AppDelegate+GIDSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D517701EA4E9D200F005D6 /* AppDelegate+GIDSignInDelegate.swift */; };
+		30D517731EA4EBA200F005D6 /* ViewController+Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D517721EA4EBA200F005D6 /* ViewController+Google.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		30D517691EA4A40700F005D6 /* FirebaseSocialLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseSocialLogin.entitlements; sourceTree = "<group>"; };
 		30D5176C1EA4DF7D00F005D6 /* ViewController+Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Facebook.swift"; sourceTree = "<group>"; };
 		30D5176E1EA4E03C00F005D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30D517701EA4E9D200F005D6 /* AppDelegate+GIDSignInDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+GIDSignInDelegate.swift"; sourceTree = "<group>"; };
+		30D517721EA4EBA200F005D6 /* ViewController+Google.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Google.swift"; sourceTree = "<group>"; };
 		67AE4721225A8C228E5194CF /* Pods_FirebaseSocialLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSocialLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E933BAED78056C5F80E2F338 /* Pods-FirebaseSocialLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSocialLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSocialLogin/Pods-FirebaseSocialLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +70,10 @@
 			children = (
 				30D517691EA4A40700F005D6 /* FirebaseSocialLogin.entitlements */,
 				30D517571EA49D9300F005D6 /* AppDelegate.swift */,
+				30D517701EA4E9D200F005D6 /* AppDelegate+GIDSignInDelegate.swift */,
 				30D517591EA49D9300F005D6 /* ViewController.swift */,
 				30D5176C1EA4DF7D00F005D6 /* ViewController+Facebook.swift */,
+				30D517721EA4EBA200F005D6 /* ViewController+Google.swift */,
 				30D5175E1EA49D9300F005D6 /* Assets.xcassets */,
 				30D517601EA49D9300F005D6 /* LaunchScreen.storyboard */,
 				30D5176E1EA4E03C00F005D6 /* GoogleService-Info.plist */,
@@ -222,6 +228,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30D517711EA4E9D200F005D6 /* AppDelegate+GIDSignInDelegate.swift in Sources */,
+				30D517731EA4EBA200F005D6 /* ViewController+Google.swift in Sources */,
 				30D5176D1EA4DF7D00F005D6 /* ViewController+Facebook.swift in Sources */,
 				30D5175A1EA49D9300F005D6 /* ViewController.swift in Sources */,
 				30D517581EA49D9300F005D6 /* AppDelegate.swift in Sources */,
