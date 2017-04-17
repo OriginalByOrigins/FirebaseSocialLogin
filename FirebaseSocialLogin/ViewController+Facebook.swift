@@ -46,30 +46,6 @@ extension ViewController: FBSDKLoginButtonDelegate {
     public func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("Loged out of Facebook")
     }
-    
-    func triggerGraphRequest() {
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "name, id, email"]).start { (connection, result, error) in
-            if error != nil {
-                print("Error request graph\n", error ?? "")
-            }
-            print("Graph Request Successfully", result ?? "Seccesfully log in")
-        }
-    }
-    
-    func signInFirebase() {
-        let accessToken = FBSDKAccessToken.current()
-        guard let accessTokenString = accessToken?.tokenString else { return }
-        
-        let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
-        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
-            if error != nil {
-                print("Failed to sign in to Firebase\n", error ?? "")
-                return
-            }
-            print("Successfully sign in to Firebse\n", user ?? "")
-        })
-    }
-    
 }
 
 extension ViewController {
@@ -94,5 +70,31 @@ extension ViewController {
             self.signInFirebase()
             self.triggerGraphRequest()
         }
+    }
+}
+
+extension ViewController {
+    
+    func triggerGraphRequest() {
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "name, id, email"]).start { (connection, result, error) in
+            if error != nil {
+                print("Error request graph\n", error ?? "")
+            }
+            print("Graph Request Successfully", result ?? "Seccesfully log in")
+        }
+    }
+    
+    func signInFirebase() {
+        let accessToken = FBSDKAccessToken.current()
+        guard let accessTokenString = accessToken?.tokenString else { return }
+        
+        let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
+        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
+            if error != nil {
+                print("Failed to sign in to Firebase\n", error ?? "")
+                return
+            }
+            print("Successfully sign in to Firebse\n", user ?? "")
+        })
     }
 }
