@@ -12,8 +12,8 @@
 		30D5175A1EA49D9300F005D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D517591EA49D9300F005D6 /* ViewController.swift */; };
 		30D5175F1EA49D9300F005D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D5175E1EA49D9300F005D6 /* Assets.xcassets */; };
 		30D517621EA49D9300F005D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D517601EA49D9300F005D6 /* LaunchScreen.storyboard */; };
-		30D5176B1EA4D5D300F005D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D5176A1EA4D5D300F005D6 /* GoogleService-Info.plist */; };
 		30D5176D1EA4DF7D00F005D6 /* ViewController+Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D5176C1EA4DF7D00F005D6 /* ViewController+Facebook.swift */; };
+		30D5176F1EA4E03C00F005D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30D5176E1EA4E03C00F005D6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,8 @@
 		30D517611EA49D9300F005D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D517631EA49D9300F005D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30D517691EA4A40700F005D6 /* FirebaseSocialLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseSocialLogin.entitlements; sourceTree = "<group>"; };
-		30D5176A1EA4D5D300F005D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		30D5176C1EA4DF7D00F005D6 /* ViewController+Facebook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Facebook.swift"; sourceTree = "<group>"; };
+		30D5176E1EA4E03C00F005D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		67AE4721225A8C228E5194CF /* Pods_FirebaseSocialLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseSocialLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E933BAED78056C5F80E2F338 /* Pods-FirebaseSocialLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseSocialLogin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseSocialLogin/Pods-FirebaseSocialLogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,7 +70,7 @@
 				30D5176C1EA4DF7D00F005D6 /* ViewController+Facebook.swift */,
 				30D5175E1EA49D9300F005D6 /* Assets.xcassets */,
 				30D517601EA49D9300F005D6 /* LaunchScreen.storyboard */,
-				30D5176A1EA4D5D300F005D6 /* GoogleService-Info.plist */,
+				30D5176E1EA4E03C00F005D6 /* GoogleService-Info.plist */,
 				30D517631EA49D9300F005D6 /* Info.plist */,
 			);
 			path = FirebaseSocialLogin;
@@ -163,7 +163,7 @@
 			files = (
 				30D517621EA49D9300F005D6 /* LaunchScreen.storyboard in Resources */,
 				30D5175F1EA49D9300F005D6 /* Assets.xcassets in Resources */,
-				30D5176B1EA4D5D300F005D6 /* GoogleService-Info.plist in Resources */,
+				30D5176F1EA4E03C00F005D6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
