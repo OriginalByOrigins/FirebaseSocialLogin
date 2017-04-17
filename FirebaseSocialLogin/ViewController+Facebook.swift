@@ -12,8 +12,8 @@ import Firebase
 
 extension ViewController: FBSDKLoginButtonDelegate {
     func addDefaultFacebookButton() {
-        self.view.addSubview(defaultFacebookButton)
         defaultFacebookButton.delegate = self
+        self.view.addSubview(defaultFacebookButton)
         defaultFacebookButton.readPermissions = ["email", "public_profile",]
         
         defaultFacebookButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
@@ -88,8 +88,8 @@ extension ViewController {
         let accessToken = FBSDKAccessToken.current()
         guard let accessTokenString = accessToken?.tokenString else { return }
         
-        let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
-        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
+        let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
                 print("Failed to sign in to Firebase\n", error ?? "")
                 return

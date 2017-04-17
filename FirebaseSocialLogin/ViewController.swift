@@ -24,8 +24,11 @@ class ViewController: UIViewController {
         button.backgroundColor = .blue
         button.setTitle("Custom Facebook Login Button", for: .normal)
         button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        button.layer.cornerRadius = 10
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.layer.cornerRadius = 5
+        button.layer.shadowOpacity = 0.6
+        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        button.layer.shadowRadius = 5
         return button
     }()
     
@@ -35,17 +38,30 @@ class ViewController: UIViewController {
         return button
     }()
 
+    let customGoogleButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .orange
+        button.setTitle("Custom Gogle Login Button", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        button.layer.cornerRadius = 5
+        button.layer.shadowOpacity = 0.6
+        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        button.layer.shadowRadius = 5
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = .white
         
-        GIDSignIn.sharedInstance().uiDelegate = self
-        
         addDefaultFacebookButton()
         addCustomFacebookButton()
         
         addDefaultGoogleButton()
+        addCustomGoogleButton()
     }
 }
 

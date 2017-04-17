@@ -14,22 +14,21 @@ extension AppDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
-            print("Failed to sign in with Google: ", error)
+            print("Failed to sign into Google: ", error)
             return
         }
-        print("Succesfully log in with Google", user ?? "")
+        print("Succesfully log into Google", user.userID ?? "")
         
         guard let authentication = user.authentication else { return }
-        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                          accessToken: authentication.accessToken)
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if let error = error {
-                print("Failed to sign in Firebase: ", error)
+                print("Failed to create a Firebase User with Google account: ", error)
                 return
             }
             
-            print("Successfully sign in Firebase: ", user ?? "")
+            print("Successfully sign in Firebase: ", user?.uid ?? "")
         })
     }
 }
